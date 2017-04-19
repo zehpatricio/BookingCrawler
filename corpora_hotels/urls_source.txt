@@ -1,0 +1,10 @@
+#DEFAULT URL
+https://www.booking.com/reviews/br/hotel/<hotel_name>.pt-br.html?r_lang=pt&order=completed_desc&page=<page_number>
+
+To find the reviews just replace <hotel_name> by one of the followings, and replace <page_number> by the number of pages bellow.
+
+{"name"="rio-othon-palace", "state"="RJ", "page_start"=3, "page_end"=10}
+{"name"="royal-jardins-boutique", "state"="SP", "page_start"=3,"page_end"=12}
+{"name"="express-arrey", "state"="PI", "page_start"=1,"page_end"=2}
+{"name"="golden-tulip-recife-palace", "state"="PE", "page_start"=3,"page_end"=12}
+{"name"="luzeiros", "state"="CE", "page_start"=3,"page_end"=12}

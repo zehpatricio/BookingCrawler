@@ -1,7 +1,0 @@
-rio-othon-palace
-windsor-marapendi
-orla-copacabana
-https://www.booking.com/reviews/br/hotel/.pt-br.html?r_lang=pt&order=completed_desc&page=1
-
-#DEFAULT URL
-https://www.booking.com/reviews/br/hotel/<name>.pt-br.html?r_lang=pt&order=completed_desc&page=1

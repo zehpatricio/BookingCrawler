@@ -6,8 +6,7 @@ from scrapy.http import request
 class BookingSpider(Spider):
 	name = "booking"
 	allowed_domains = ["www.booking.com"]
-	
-	start_urls = ["https://www.booking.com/reviews/br/hotel/sheraton-da-bahia.pt-br.html?label=gen173nr-1DCA0oIEIRc2hlcmF0b24tZGEtYmFoaWFILWIFbm9yZWZoIIgBAZgBLcIBA3gxMcgBDNgBA-gBAfgBApICAXmoAgM;sid=38f60febc822c63a38161e77100821c9;customer_type=total;hp_nav=0;old_page=0;order=featuredreviews;page=2;r_lang=pt;rows=75&"]
+	start_urls = ["https://www.booking.com/reviews/br/hotel/luzeiros.pt-br.html?r_lang=pt&order=completed_desc&page="+str(i) for i in range(3, 13)]
 
 	def parse(reviewf, response):
 		reviews = response.css('.review_item')
@@ -24,4 +23,3 @@ class BookingSpider(Spider):
 			item['negative'] = review.css('.review_item_review_content>.review_neg>span::text').extract_first()
 			item['positive'] = review.css('.review_item_review_content>.review_pos>span::text').extract_first()
 			yield item
-		print(">>>>>>>>>>>>> "+str(len(reviews))+" Reviews Encontrados "+"<<<<<<<<<<<<<")

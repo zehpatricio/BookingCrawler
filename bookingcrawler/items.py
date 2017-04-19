@@ -11,7 +11,9 @@ import scrapy
 class BookingcrawlerItem(scrapy.Item):
     date = scrapy.Field()
     author = scrapy.Field()
+    country = scrapy.Field()
     number_of_avaliations = scrapy.Field()
+    score = scrapy.Field()
     title = scrapy.Field()
     positive = scrapy.Field()
     negative = scrapy.Field()
